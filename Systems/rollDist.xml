@@ -4,7 +4,7 @@
 
   <filter>
     <name>ground roll distance ft</name>
-    <debug>true</debug>
+    <debug>false</debug>
     <type>integrator</type>
     <!-- 6080 ft/nm  3600 secs/hr -->
     <gain>1.68055</gain>
@@ -37,5 +37,4 @@
       <value>20000</value>
     </u_max>
   </filter>
-
 </PropertyList>

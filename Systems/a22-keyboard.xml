@@ -98,10 +98,6 @@
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>controls/lighting/instrument-lights</property>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
         <property>controls/lighting/nav-lights</property>
       </binding>
       <binding>

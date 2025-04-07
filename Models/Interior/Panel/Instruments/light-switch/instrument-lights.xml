@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>light-switch.ac</path>
+ 
+ <animation>
+  <type>knob</type>
+  <object-name>light_knob</object-name>
+  <property>controls/lighting/instrument-lights</property>
+  <factor>200.00</factor>
+  <offset-deg>50.00</offset-deg>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+  <visible>true</visible>
+  <action>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/lighting/instrument-lights</property>
+      <factor>0.1</factor>
+      <min>0</min>
+      <max>1.0</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+   
+  <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>instrument-lights</tooltip-id>
+      <label>Instruments Lights: %3d%%</label>
+      <property>controls/lighting/instrument-lights</property>
+      <mapping>percent</mapping>
+    </binding>
+  </hovered>
+ </animation>
+
+</PropertyList>

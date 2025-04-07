@@ -3,7 +3,7 @@
 <PropertyList>
 
   <lighting>
-    <instrument-lights type="bool">false</instrument-lights>
+    <instrument-lights type="float">0.0</instrument-lights>
     <nav-lights        type="bool">false</nav-lights>
     <taxi-lights       type="bool">false</taxi-lights>
     <beacon            type="bool">false</beacon>

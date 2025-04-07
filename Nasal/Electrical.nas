@@ -144,12 +144,8 @@ setlistener("/sim/signals/fdm-initialized", func {
 init_switches = func() {
   var tprop=props.globals.getNode("controls/electric/ammeter-switch",1);
   tprop.setBoolValue(1);
-  tprop=props.globals.getNode("controls/lighting/instrument-lights",1);
-  tprop.setBoolValue(0);
-
-  setprop("controls/lighting/instrument-lights-norm",0.8);
-  setprop("controls/lighting/instruments-norm",0.8);
-
+  setprop("controls/lighting/instrument-lights",0.0);
+  
   append(switch_list,"controls/engines/engine/starter");
   append(output_list,"starter");
   append(watt_list,10.0);
@@ -306,11 +302,8 @@ electrical_bus = func(bv) {
     setprop(outPut~output_list[i],bus_volts * srvc);
   }
 
-  var DIMMER = bus_volts * getprop("controls/lighting/instrument-lights-norm");
-  var INSTR_SWTCH = getprop("controls/lighting/instrument-lights");
-  DIMMER=DIMMER*INSTR_SWTCH;
+  var DIMMER = bus_volts * getprop("controls/lighting/instrument-lights");
 
-  setprop(outPut~"instrument-lights",DIMMER);
   setprop(outPut~"instrument-lights-norm",DIMMER * 0.0357);
 
   return load;
