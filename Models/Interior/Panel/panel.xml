@@ -199,6 +199,14 @@
       </animation>
     </overlay>
   </model>
+  <model>
+    <path>/Aircraft/Instruments-3d/ar-6201/ar-6201.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.003 </y-m>
+      <z-m>  -0.084 </z-m>
+    </offsets>
+  </model>
 
   <model>
     <path>Instruments/VSI/VSI.xml</path>

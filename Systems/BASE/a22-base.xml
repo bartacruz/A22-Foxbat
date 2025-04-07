@@ -145,6 +145,9 @@
       <file>Aircraft/A22-Foxbat/Nasal/Electrical.nas</file>
       <file>Aircraft/A22-Foxbat/Nasal/magnetos.nas</file>
     </a22>
+    <ar6201>
+			<file>Aircraft/Instruments-3d/ar-6201/ar6201.nas</file>
+		</ar6201>
   </nasal>
 
 </PropertyList>
