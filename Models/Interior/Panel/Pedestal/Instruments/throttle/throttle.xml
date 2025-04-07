@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>throttle.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>base</object-name>
+    <object-name>throttle</object-name>
+    <object-name>brake</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!--  Throttle pick animation -->
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>throttle</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <factor>0.1</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>throttle</object-name>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <factor> -0.085 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>brake</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/gear/brake-parking</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>brake</object-name>
+    <property>/controls/gear/brake-parking</property>
+    <factor> -0.039 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

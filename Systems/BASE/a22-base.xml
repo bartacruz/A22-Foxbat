@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim               include="../views.xml">
+
+    <fuel-fraction> 1</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/A22-Foxbat/a22-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path          archive="y">Aircraft/A22-Foxbat/Sounds/a22-sound.xml</path>
+    </sound>
+
+    <model>
+      <path          archive="y">Aircraft/A22-Foxbat/Models/a22.xml</path>
+      <livery>
+        <file        type="string"/>
+        <specular>
+          <red       type="float">0.02</red>
+          <green     type="float">0.02</green>
+          <blue      type="float">0.02</blue>
+        </specular>
+      </livery>
+      <intlivery>
+        <file        type="string"/>
+        <specular>
+          <red       type="float">0.02</red>
+          <green     type="float">0.02</green>
+          <blue      type="float">0.02</blue>
+        </specular>
+      </intlivery>
+      <show-yoke     type="bool">true</show-yoke>
+    </model>
+
+    <systems         include="../rules.xml"/>
+
+    <instrumentation include="../instrumentation.xml"/>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <!-- Immat -->
+        <int    n="0"  type="int">0</int>
+        <int    n="1"  type="int">0</int>
+        <int    n="2"  type="int">0</int>
+        <int    n="3"  type="int">0</int>
+        <int    n="4"  type="int">0</int>
+        <int    n="5"  type="int">0</int>
+        <!--  -->
+        <bool   n="0"  alias="/sim/model/show-yoke"/>
+        <bool   n="2"  alias="/sim/rendering/hdr/hdr-enabled"/>
+        <bool   n="3"  alias="/gear/gear[0]/wow"/>
+        <bool   n="4"  alias="/gear/gear[1]/wow"/>
+        <bool   n="5"  alias="/gear/gear[2]/wow"/>
+        <bool   n="6"  alias="/gear/gear[3]/wow"/>
+        <bool   n="7"  alias="/gear/gear[6]/wow"/>
+        <bool   n="8"  alias="/gear/gear[7]/wow"/>
+        <!-- Lights -->
+        <bool   n="11" alias="/controls/lighting/beacon"/>
+        <bool   n="12" alias="/sim/model/lights/beacon/state"/>
+        <bool   n="13" alias="/controls/lighting/strobe"/>
+        <bool   n="14" alias="/sim/model/lights/sbc1/state"/>
+        <bool   n="15" alias="/controls/lighting/nav-lights"/>
+        <bool   n="16" alias="/controls/lighting/landing-lights"/>
+        <!-- Engines -->
+        <bool   n="17"  alias="/engines/engine[0]/cranking"/>
+        <!-- Doors -->
+        <float  n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float  n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <!-- -->
+        <float  n="2"  alias="/position/gear-agl-m">0</float>
+        <float  n="3"  alias="/position/altitude-ft">0</float>
+        <!-- Engines -->
+        <float  n="4"  alias="/engines/engine[0]/rpm"/>
+        <!-- Ground -->
+        <float  n="5"  alias="/gear/gear[0]/rollspeed-ms"/>
+        <float  n="6"  alias="/gear/gear[1]/rollspeed-ms"/>
+        <float  n="7"  alias="/gear/gear[2]/rollspeed-ms"/>
+        <float  n="8"  alias="/gear/gear[3]/rollspeed-ms"/>
+        <float  n="9"  alias="/instrumentation/airspeed-indicator/indicated-speed-kt"/>
+        <!-- Mode -->
+        <string n="0"  alias="/sim/model/mode"/>
+        <!-- For Bombable -->
+        <int    n="10" type="int" alias="controls/armament/trigger">0</int>
+        <string n="9"  type="string"/>
+      </generic>
+    </multiplay>
+
+    <weight          n="0">
+      <name          type="string">Crew</name>
+      <weight-lb     type="float">175</weight-lb>
+      <max-lb        type="float">408</max-lb>
+      <min-lb        type="float">0</min-lb>
+    </weight>
+
+    <weight          n="1">
+      <name          type="string">Pax</name>
+      <weight-lb     type="float">0</weight-lb>
+      <max-lb        type="float">408</max-lb>
+      <min-lb        type="float">0</min-lb>
+    </weight>
+
+    <weight          n="2">
+      <name          type="string">Baggage</name>
+      <weight-lb     type="float">0</weight-lb>
+      <max-lb        type="float">200</max-lb>
+      <min-lb        type="float">0</min-lb>
+    </weight>
+
+    <help            include="../help.xml"/>
+
+    <flaps           include="../flaps.xml"/>
+
+    <menubar         include="../../Dialogs/a22-menu.xml"/>
+
+    <aircraft-data   include="../aircraft-data.xml"/>
+
+  </sim>
+
+  <input             include="../a22-keyboard.xml"/>
+
+  <engines           include="../engines.xml"/>
+
+  <controls          include="../controls.xml"/>
+
+  <instrumentation   include="../instrumentation.xml">
+    <gsdi>
+      <serviceable   type="bool">true</serviceable>
+      <enabled       type="bool">true</enabled>
+    </gsdi>
+  </instrumentation>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/A22-Foxbat/Nasal/doors.nas</file>
+    </doors>
+    <a22>
+      <file>Aircraft/A22-Foxbat/Nasal/hdr.nas</file>
+      <file>Aircraft/A22-Foxbat/Nasal/liveries.nas</file>
+      <file>Aircraft/A22-Foxbat/Nasal/light.nas</file>
+      <file>Aircraft/A22-Foxbat/Nasal/convert.nas</file>
+      <file>Aircraft/A22-Foxbat/Nasal/Electrical.nas</file>
+    </a22>
+  </nasal>
+
+</PropertyList>

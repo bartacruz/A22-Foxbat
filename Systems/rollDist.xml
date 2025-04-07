@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <filter>
+    <name>ground roll distance ft</name>
+    <debug>true</debug>
+    <type>integrator</type>
+    <!-- 6080 ft/nm  3600 secs/hr -->
+    <gain>1.68055</gain>
+    <enable>
+      <condition>
+        <property>/gear/gear[2]/wow</property>
+      </condition>
+    </enable>
+    <input>
+      <condition>
+        <property>/controls/gear/brake-parking</property>
+      </condition>
+      <value>0</value>
+    </input>
+    <input>
+      <property>velocities/groundspeed-kt</property>
+    </input>
+    <output>
+      <condition>
+        <property>/systems/tune/roll-distance-reset</property>
+      </condition>
+      <property>systems/tune/roll-distance-ft</property>
+      <value>0</value>
+    </output>
+    <output>
+      <property>systems/tune/roll-distance-ft</property>
+    </output>
+    <u_min>0</u_min>
+    <u_max>
+      <value>20000</value>
+    </u_max>
+  </filter>
+
+</PropertyList>

@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>a22.ac</path>
+
+  <!-- MP sound call -->
+  <sound>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <path>../Sounds/mp-sound.xml</path>
+  </sound>
+
+  <sound>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <path>../Sounds/mpA-sound.xml</path>
+  </sound>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/A22-Foxbat/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fuselage</object-name>
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
+    <object-name>ailes</object-name>
+    <object-name>flaperonG</object-name>
+    <object-name>flaperonD</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>trimprof</object-name>
+    <object-name>direction</object-name>
+    <object-name>bol</object-name>
+    <object-name>entretoises</object-name>
+    <object-name>supportlampes</object-name>
+
+    <!-- Wheels version -->
+    <object-name>cacheA</object-name>
+    <object-name>cacheG</object-name>
+    <object-name>cacheD</object-name>
+    <object-name>axeG</object-name>
+    <object-name>axeD</object-name>
+
+    <!-- Floats version -->
+    <object-name>axesfloats</object-name>
+    <object-name>flotteurs</object-name>
+
+    <object-name>trous</object-name>
+    <object-name>helice</object-name>
+
+    <!-- Wheels version -->
+    <object-name>intcacheA</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>roueA</object-name>
+    <object-name>intcacheG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>intcacheD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueB</object-name>
+
+    <!-- Floats version -->
+    <object-name>roueAG</object-name>
+    <object-name>roueFG</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>roueFD</object-name>
+    <object-name>Ldamper</object-name>
+    <object-name>Rdamper</object-name>
+    <object-name>Lstrut1</object-name>
+    <object-name>Rstrut1</object-name>
+    <object-name>Lstrut2</object-name>
+    <object-name>Rstrut2</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>vitres</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>lampes</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <!-- HDR mode -->
+    <object-name>HDRvitres</object-name>
+    <object-name>HDRvitreG</object-name>
+    <object-name>HDRvitreD</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
+    <object-name>ailes</object-name>
+    <object-name>flaperonG</object-name>
+    <object-name>flaperonD</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>trimprof</object-name>
+    <object-name>direction</object-name>
+    <object-name>bol</object-name>
+    <object-name>entretoises</object-name>
+    <object-name>supportlampes</object-name>
+    <object-name>cacheA</object-name>
+    <object-name>cacheG</object-name>
+    <object-name>cacheD</object-name>
+    <object-name>axeG</object-name>
+    <object-name>axeD</object-name>
+    <object-name>axesfloats</object-name>
+    <object-name>flotteurs</object-name>
+    <object-name>trous</object-name>
+    <object-name>helice</object-name>
+    <object-name>intcacheA</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>roueA</object-name>
+    <object-name>intcacheG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>intcacheD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueB</object-name>
+    <object-name>roueAG</object-name>
+    <object-name>roueFG</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>roueFD</object-name>
+    <object-name>Ldamper</object-name>
+    <object-name>Rdamper</object-name>
+    <object-name>Lstrut1</object-name>
+    <object-name>Rstrut1</object-name>
+    <object-name>Lstrut2</object-name>
+    <object-name>Rstrut2</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>lampes</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>HDRvitres</object-name>
+    <object-name>HDRvitreG</object-name>
+    <object-name>HDRvitreD</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/A22-Foxbat/Models/Effects/Bump/bumpspec</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
+    <object-name>ailes</object-name>
+    <object-name>flaperonG</object-name>
+    <object-name>flaperonD</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>trimprof</object-name>
+    <object-name>direction</object-name>
+    <object-name>bol</object-name>
+    <object-name>entretoises</object-name>
+    <object-name>supportlampes</object-name>
+    <object-name>cacheA</object-name>
+    <object-name>cacheG</object-name>
+    <object-name>cacheD</object-name>
+    <object-name>axeG</object-name>
+    <object-name>axeD</object-name>
+    <object-name>axesfloats</object-name>
+    <object-name>flotteurs</object-name>
+  </effect>
+
+  <!-- Floats version -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <object-name>axesfloats</object-name>
+    <object-name>flotteurs</object-name>
+    <object-name>roueAG</object-name>
+    <object-name>roueFG</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>roueFD</object-name>
+    <object-name>Ldamper</object-name>
+    <object-name>Rdamper</object-name>
+    <object-name>Lstrut1</object-name>
+    <object-name>Rstrut1</object-name>
+    <object-name>Lstrut2</object-name>
+    <object-name>Rstrut2</object-name>
+  </animation>
+
+  <!-- Wheels version -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <object-name>axeAH</object-name>
+    <object-name>cacheA</object-name>
+    <object-name>intcacheA</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeG</object-name>
+    <object-name>cacheG</object-name>
+    <object-name>intcacheG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeD</object-name>
+    <object-name>cacheD</object-name>
+    <object-name>intcacheD</object-name>
+    <object-name>roueD</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
+  <effect>
+    <inherits-from>Effects/Glass/glassrain</inherits-from>
+    <object-name>vitres</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/Glass/glass</inherits-from>
+    <object-name>HDRvitres</object-name>
+    <object-name>HDRvitreG</object-name>
+    <object-name>HDRvitreD</object-name>
+  </effect>
+
+  <!-- Sélection des vitres en fonction de HDR ou pas -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <property>sim/rendering/hdr/hdr-enabled</property> -->
+      <property>sim/multiplay/generic/bool[2]</property>
+    </condition>
+    <object-name>HDRvitres</object-name>
+    <object-name>HDRvitreG</object-name>
+    <object-name>HDRvitreD</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <not><property>sim/rendering/hdr/hdr-enabled</property></not> -->
+      <not><property>sim/multiplay/generic/bool[2]</property></not>
+    </condition>
+    <object-name>vitres</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>lampes</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+  </effect>
+
+  <model>
+    <path>Interior/interior.xml</path>
+  </model>
+
+  <animation>
+    <type>material</type>
+    <object-name>interieur</object-name>
+    <object-name>intporteG</object-name>
+    <object-name>intporteD</object-name>
+    <object-name>structure</object-name>
+    <object-name>planchet</object-name>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>intvitreD</object-name>
+    <object-name>HDRintvitres</object-name>
+    <object-name>HDRintvitreG</object-name>
+    <object-name>HDRintvitreD</object-name>
+
+    <property-base>sim/model/int-livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>interior.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <model>
+    <path>Effects/cranking/all-crankings.xml</path>
+  </model>
+
+  <model>
+    <path>Effects/ground/all-ground.xml</path>
+  </model>
+
+  <model>
+    <path>Effects/wakes/all-wakes.xml</path>
+  </model>
+
+  <model>
+    <path>lights/all-lights.xml</path>
+  </model>
+
+  <!-- L'hélice -->
+  <animation>
+    <name>HeliceComplete</name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+    <object-name>helice</object-name>
+    <object-name>bol</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblur</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>600.000</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>helice</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceComplete</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>5</value>
+      </greater-than>
+    </condition>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -2.94166 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.10245 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de profondeur -->
+  <animation>
+    <name>GouverneProf</name>
+    <object-name>profondeur</object-name>
+    <object-name>trimprof</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GouverneProf</object-name>
+    <!-- <property>controls/flight/elevator</property> -->
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m>  2.69087 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.10700 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>direction</object-name>
+    <!-- <property>controls/flight/rudder</property> -->
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m>  2.30210 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -0.05509 </z1-m>
+      <x2-m>  2.63670 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m>  1.14091 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flaperonG</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m> -0.67897 </x1-m>
+      <y1-m> -4.75093 </y1-m>
+      <z1-m>  0.43196 </z1-m>
+      <x2-m> -0.51343 </x2-m>
+      <y2-m> -0.67094 </y2-m>
+      <z2-m>  0.31894 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flaperonD</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m> -0.51343 </x1-m>
+      <y1-m>  0.67094 </y1-m>
+      <z1-m>  0.31894 </z1-m>
+      <x2-m> -0.67897 </x2-m>
+      <y2-m>  4.75093 </y2-m>
+      <z2-m>  0.43196 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Volets -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flaperonG</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 18.5 </factor>
+    <axis>
+      <x1-m> -0.67897 </x1-m>
+      <y1-m> -4.75093 </y1-m>
+      <z1-m>  0.43196 </z1-m>
+      <x2-m> -0.51343 </x2-m>
+      <y2-m> -0.67094 </y2-m>
+      <z2-m>  0.31894 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flaperonD</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 18.5 </factor>
+    <axis>
+      <x1-m> -0.51343 </x1-m>
+      <y1-m>  0.67094 </y1-m>
+      <z1-m>  0.31894 </z1-m>
+      <x2-m> -0.67897 </x2-m>
+      <y2-m>  4.75093 </y2-m>
+      <z2-m>  0.43196 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Compression -->
+  <animation>
+    <name>TrainAvant</name>
+    <object-name>roueA</object-name>
+    <object-name>cacheA</object-name>
+    <object-name>intcacheA</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>TrainAvant</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.044 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0.009 </x>
+      <y> 0.000 </y>
+      <z> 0.044 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>TrainGauche</name>
+    <object-name>roueG</object-name>
+    <object-name>cacheG</object-name>
+    <object-name>intcacheG</object-name>
+    <object-name>axeG</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainGauche</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> -4 </dep></entry>
+      <entry><ind> 0.6 </ind><dep>  1 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  6 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -1.08431 </x-m>
+      <y-m> -0.25882 </y-m>
+      <z-m> -0.64049 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>TrainDroit</name>
+    <object-name>roueD</object-name>
+    <object-name>cacheD</object-name>
+    <object-name>intcacheD</object-name>
+    <object-name>axeD</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainDroit</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[2]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> -4 </dep></entry>
+      <entry><ind> 0.6 </ind><dep>  1 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  6 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -1.08431 </x-m>
+      <y-m>  0.25882 </y-m>
+      <z-m> -0.64049 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainAvant</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[0]/caster-angle-deg</property>
+    <factor> -0.5 </factor>
+    <axis>
+      <x1-m> -2.32729 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -0.81884 </z1-m>
+      <x2-m> -2.27883 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m>  0.16756 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <type>spin</type>
+    <object-name>roueA</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> -30 </factor>
+    <center>
+      <x-m> -2.37467 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.00896 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueG</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> -30 </factor>
+    <axis>
+      <x1-m> -1.11084 </x1-m>
+      <y1-m> -0.96562 </y1-m>
+      <z1-m> -1.01085 </z1-m>
+      <x2-m> -1.11084 </x2-m>
+      <y2-m> -0.86487 </y2-m>
+      <z2-m> -1.00203 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueD</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> -30 </factor>
+    <axis>
+      <x1-m> -1.11084 </x1-m>
+      <y1-m>  0.86487 </y1-m>
+      <z1-m> -1.00203 </z1-m>
+      <x2-m> -1.11084 </x2-m>
+      <y2-m>  0.96562 </y2-m>
+      <z2-m> -1.01085 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueB</object-name>
+    <property>gear/gear[3]/rollspeed-ms</property>
+    <factor> -30 </factor>
+    <center>
+      <x-m>  2.45707 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.33614 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Doors -->
+  <animation>
+    <type>pick</type>
+    <object-name>porteG</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>HDRvitreG</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <and>
+            <or>
+              <property>gear/gear[0]/wow</property>
+              <property>gear/gear[1]/wow</property>
+              <property>gear/gear[2]/wow</property>
+              <property>gear/gear[3]/wow</property>
+              <property>gear/gear[4]/wow</property>
+              <property>gear/gear[5]/wow</property>
+              <property>gear/gear[6]/wow</property>
+              <property>gear/gear[7]/wow</property>
+              <property>gear/gear[8]/wow</property>
+              <property>gear/gear[9]/wow</property>
+            </or>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>porteG</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>HDRvitreG</object-name>
+    <!-- <property>sim/model/door-positions/crew/position-norm</property> -->
+    <property>sim/multiplay/generic/float[0]</property>
+    <factor> -90 </factor>
+    <axis>
+      <x1-m> -0.98122 </x1-m>
+      <y1-m> -0.59624 </y1-m>
+      <z1-m>  0.27895 </z1-m>
+      <x2-m> -0.72293 </x2-m>
+      <y2-m> -0.59853 </y2-m>
+      <z2-m>  0.22982 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>porteD</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>HDRvitreD</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <and>
+            <or>
+              <property>gear/gear[0]/wow</property>
+              <property>gear/gear[1]/wow</property>
+              <property>gear/gear[2]/wow</property>
+              <property>gear/gear[3]/wow</property>
+              <property>gear/gear[4]/wow</property>
+              <property>gear/gear[5]/wow</property>
+              <property>gear/gear[6]/wow</property>
+              <property>gear/gear[7]/wow</property>
+              <property>gear/gear[8]/wow</property>
+              <property>gear/gear[9]/wow</property>
+            </or>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>porteD</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>HDRvitreD</object-name>
+    <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+    <property>sim/multiplay/generic/float[1]</property>
+    <factor> 90 </factor>
+    <axis>
+      <x1-m> -0.98122 </x1-m>
+      <y1-m>  0.59624 </y1-m>
+      <z1-m>  0.27895 </z1-m>
+      <x2-m> -0.72293 </x2-m>
+      <y2-m>  0.59853 </y2-m>
+      <z2-m>  0.22982 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- ************************ mode amphibius ************************ -->
+  <animation>
+    <name>EnsembleAvantG</name>
+    <object-name>Ldamper</object-name>
+    <object-name>Lstrut2</object-name>
+    <object-name>roueAG</object-name>
+  </animation>
+
+  <animation>
+    <name>EnsembleAvantD</name>
+    <object-name>Rdamper</object-name>
+    <object-name>Rstrut2</object-name>
+    <object-name>roueAD</object-name>
+  </animation>
+
+  <animation>
+    <name>RoueAvantG</name>
+    <object-name>Ldamper</object-name>
+    <object-name>roueAG</object-name>
+  </animation>
+
+  <animation>
+    <name>RoueAvantD</name>
+    <object-name>Rdamper</object-name>
+    <object-name>roueAD</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>EnsembleAvantG</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.1352 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.0000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0.054 </x>
+      <y> 0.000 </y>
+      <z> 0.124 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>EnsembleAvantD</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.1352 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.0000 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0.054 </x>
+      <y> 0.000 </y>
+      <z> 0.124 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RoueAvantG</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[0]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -50 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.37708 </x-m>
+      <y-m> -0.67976 </y-m>
+      <z-m> -1.35286 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RoueAvantD</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[1]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -50 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.37708 </x-m>
+      <y-m>  0.67976 </y-m>
+      <z-m> -1.35286 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFG</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.12 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.00 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFG</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[2]/compression-m</property>
+    <factor> 0.1 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFD</object-name>
+    <object-name>axeFD</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[3]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.12 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.00 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueFD</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[3]/compression-m</property>
+    <factor> 0.1 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueAG</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.31376 </x-m>
+      <y-m> -0.67976 </y-m>
+      <z-m> -1.45928 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueAD</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.31376 </x-m>
+      <y-m>  0.67976 </y-m>
+      <z-m> -1.45928 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueFG</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -1.36998 </x-m>
+      <y-m> -0.67975 </y-m>
+      <z-m> -1.40629 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueFD</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <property>gear/gear[3]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -1.36998 </x-m>
+      <y-m>  0.67975 </y-m>
+      <z-m> -1.40629 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

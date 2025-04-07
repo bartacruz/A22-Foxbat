@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>protect.ac</path>
+
+  <animation>
+    <object-name>protect</object-name>
+  </animation>
+
+</PropertyList>

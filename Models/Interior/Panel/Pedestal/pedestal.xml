@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>pedestal.ac</path>
+
+  <animation>
+    <object-name>pedestal</object-name>
+
+  </animation>
+
+  <model>
+    <path>Instruments/fuel/fuelL.xml</path>
+    <offsets>
+      <x-m>         0.00134 </x-m>
+      <y-m>        -0.03100 </y-m>
+      <z-m>        -0.03698 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Instruments/fuel/fuelR.xml</path>
+    <offsets>
+      <x-m>         0.00134 </x-m>
+      <y-m>         0.03100 </y-m>
+      <z-m>        -0.03698 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Instruments/key/key.xml</path>
+    <offsets>
+      <x-m>         0.00025 </x-m>
+      <y-m>        -0.04800 </y-m>
+      <z-m>        -0.16807 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.500 </x-offset>
+        <y-offset> 0.500 </y-offset>
+        <z-offset> 0.500 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/plaques/plaques.xml</path>
+  </model>
+
+  <model>
+    <path>Instruments/switch/all-switchs.xml</path>
+  </model>
+
+  <model>
+    <path>Instruments/throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.189 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.265 </z-m>
+      <pitch-deg> 21 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Instruments/trim/trim.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.018 </y-m>
+      <z-m> -0.129 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

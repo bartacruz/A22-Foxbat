@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left wakes -->
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -3.037 </x-m>
+      <y-m> -0.679 </y-m>
+      <z-m> -1.207 </z-m>
+      <heading-deg> -40 </heading-deg>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -3.037 </x-m>
+      <y-m> -0.679 </y-m>
+      <z-m> -1.207 </z-m>
+      <heading-deg> 40 </heading-deg>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.177 </x-m>
+      <y-m> -0.679 </y-m>
+      <z-m> -1.323 </z-m>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right wakes -->
+  <model>
+    <path>wakeD.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -3.037 </x-m>
+      <y-m>  0.679 </y-m>
+      <z-m> -1.207 </z-m>
+      <heading-deg> -40 </heading-deg>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeD.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -3.037 </x-m>
+      <y-m>  0.679 </y-m>
+      <z-m> -1.207 </z-m>
+      <heading-deg> 40 </heading-deg>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeD.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.177 </x-m>
+      <y-m>  0.679 </y-m>
+      <z-m> -1.323 </z-m>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

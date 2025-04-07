@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Wheels mode -->
+  <!-- Noze wheel -->
+  <model>
+    <path>ground0.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -2.348 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.183 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Left wheel -->
+  <model>
+    <path>ground1.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.110 </x-m>
+      <y-m> -0.900 </y-m>
+      <z-m> -1.180 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right wheel -->
+  <model>
+    <path>ground2.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>WHEELS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.110 </x-m>
+      <y-m>  0.900 </y-m>
+      <z-m> -1.180 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Amphibius mode -->
+  <!-- Front left wheel -->
+  <model>
+    <path>ground0.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -3.313 </x-m>
+      <y-m> -0.679 </y-m>
+      <z-m> -1.524 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Front right wheel -->
+  <model>
+    <path>ground1.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -3.313 </x-m>
+      <y-m>  0.679 </y-m>
+      <z-m> -1.524 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Left central wheel -->
+  <model>
+    <path>ground2.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.369 </x-m>
+      <y-m> -0.679 </y-m>
+      <z-m> -1.524 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right central wheel -->
+  <model>
+    <path>ground3.xml</path>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>AMPHIBIUS</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.369 </x-m>
+      <y-m>  0.679 </y-m>
+      <z-m> -1.524 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>yoke.xml</path>
+    <offsets>
+      <x-m>  0.077 </x-m>
+      <y-m> -0.300 </y-m>
+      <z-m> -0.083 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>yoke.xml</path>
+    <offsets>
+      <x-m>  0.077 </x-m>
+      <y-m>  0.300 </y-m>
+      <z-m> -0.083 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

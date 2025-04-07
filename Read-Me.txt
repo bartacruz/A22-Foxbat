@@ -1,0 +1,79 @@
+English/Français
+
+[English]
+----------
+
+A little history
+================
+
+Aeroprakt A22 Foxbat
+====================
+
+Manufacturer                  : Aeroprakt
+Type                          :
+Year                          :
+Powerplant                    :
+Wingspan                      :
+Length                        :
+Height                        :
+weight max                    :
+Cruise speed                  :
+Range                         :
+Crew                          :
+
+Some useful keys:
+=================
+
+Thanks
+======
+
+===============
+BARANGER Emmanuel
+December, 22, 2024
+January,  01, 2025
+January,  25, 2025
+January,  26, 2025
+
+http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
+embaranger@gmail.com
+
+
+[Français]
+----------
+
+Un peu d'histoire
+=================
+
+Aeroprakt A22 Foxbat
+====================
+
+Constructeur                  : Aeroprakt
+Type                          :
+Année                         :
+Moteur                        :
+Envergure                     :
+Longueur                      :
+Hauteur                       :
+Poids max au décollage        :
+Vitesse estimée de croisière  :
+Autonomie estimée             :
+Equipage                      :
+
+
+Quelques touches utiles :
+=========================
+
+Remerciements
+=============
+
+===============
+BARANGER Emmanuel
+22 Décembre 2024
+01 Janvier  2025
+25 Janvier  2025
+26 Janvier  2025
+
+http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
+embaranger@gmail.com

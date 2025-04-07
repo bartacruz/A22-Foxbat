@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+
+      <model>
+        <livery>
+          <name type="string">Red</name>
+          <texture>Liveries/2048x2048/red.png</texture>
+          <specular>
+            <red>   0.02 </red>
+            <green> 0.02 </green>
+            <blue>  0.02 </blue>
+          </specular>
+        </livery>
+        <int-livery>
+          <name type="string">Red</name>
+          <texture>Liveries/Interior/red.png</texture>
+          <specular>
+            <red>   0.02 </red>
+            <green> 0.02 </green>
+            <blue>  0.02 </blue>
+          </specular>
+        </int-livery>
+      </model>
+
+  </sim>
+
+</PropertyList>

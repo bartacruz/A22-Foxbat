@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>plaques.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>text</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>fond</object-name>
+    <object-name>text</object-name>
+  </animation>
+
+</PropertyList>

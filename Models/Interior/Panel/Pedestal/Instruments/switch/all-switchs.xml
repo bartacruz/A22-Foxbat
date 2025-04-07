@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>landing-light.xml</path>
+    <offsets>
+      <x-m>         0.00085 </x-m>
+      <y-m>        -0.05500 </y-m>
+      <z-m>        -0.08709 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>strobe-light.xml</path>
+    <offsets>
+      <x-m>         0.00085 </x-m>
+      <y-m>        -0.03700 </y-m>
+      <z-m>        -0.08709 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>transponder.xml</path>
+    <offsets>
+      <x-m>         0.00085 </x-m>
+      <y-m>        -0.01900 </y-m>
+      <z-m>        -0.08709 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>radio.xml</path>
+    <offsets>
+      <x-m>         0.00085 </x-m>
+      <y-m>        -0.00100 </y-m>
+      <z-m>        -0.08709 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>intercom.xml</path>
+    <offsets>
+      <x-m>         0.00085 </x-m>
+      <y-m>         0.01700 </y-m>
+      <z-m>        -0.08709 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>12Vplug.xml</path>
+    <offsets>
+      <x-m>         0.00085 </x-m>
+      <y-m>         0.03500 </y-m>
+      <z-m>        -0.08709 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>protect.xml</path>
+    <offsets>
+      <x-m>         0.00010 </x-m>
+      <y-m>        -0.03625 </y-m>
+      <z-m>        -0.12631 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>ignition0.xml</path>
+    <offsets>
+      <x-m>         0.00066 </x-m>
+      <y-m>        -0.04800 </y-m>
+      <z-m>        -0.12665 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>ignition1.xml</path>
+    <offsets>
+      <x-m>         0.00066 </x-m>
+      <y-m>        -0.02500 </y-m>
+      <z-m>        -0.12665 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

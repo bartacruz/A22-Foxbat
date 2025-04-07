@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>trim.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>trim5</object-name>
+    <object-name>trim4</object-name>
+    <object-name>trim3</object-name>
+    <object-name>trim2</object-name>
+    <object-name>trim1</object-name>
+    <object-name>trim0</object-name>
+    <object-name>trim-1</object-name>
+    <object-name>trim-2</object-name>
+    <object-name>trim-3</object-name>
+    <object-name>trim-4</object-name>
+    <object-name>trim-5</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>fond</object-name>
+    <object-name>trim5</object-name>
+    <object-name>trim4</object-name>
+    <object-name>trim3</object-name>
+    <object-name>trim2</object-name>
+    <object-name>trim1</object-name>
+    <object-name>trim0</object-name>
+    <object-name>trim-1</object-name>
+    <object-name>trim-2</object-name>
+    <object-name>trim-3</object-name>
+    <object-name>trim-4</object-name>
+    <object-name>trim-5</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>trim5</object-name>
+    <object-name>trim4</object-name>
+    <object-name>trim3</object-name>
+    <object-name>trim2</object-name>
+    <object-name>trim1</object-name>
+    <object-name>trim0</object-name>
+    <object-name>trim-1</object-name>
+    <object-name>trim-2</object-name>
+    <object-name>trim-3</object-name>
+    <object-name>trim-4</object-name>
+    <object-name>trim-5</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim5</object-name>
+    <condition>
+      <and>
+        <less-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>1</value>
+        </less-than-equals>
+        <greater-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.8</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim4</object-name>
+    <condition>
+      <and>
+        <less-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.8</value>
+        </less-than-equals>
+        <greater-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.6</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim3</object-name>
+    <condition>
+      <and>
+        <less-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.6</value>
+        </less-than-equals>
+        <greater-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.4</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim2</object-name>
+    <condition>
+      <and>
+        <less-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.4</value>
+        </less-than-equals>
+        <greater-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.2</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim1</object-name>
+    <condition>
+      <and>
+        <less-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0.2</value>
+        </less-than-equals>
+        <greater-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim0</object-name>
+    <condition>
+      <equals>
+        <property>/controls/flight/elevator-trim</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim-1</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>0</value>
+        </less-than>
+        <greater-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.2</value>
+        </greater-than-equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim-2</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.2</value>
+        </less-than>
+        <greater-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.4</value>
+        </greater-than-equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim-3</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.4</value>
+        </less-than>
+        <greater-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.6</value>
+        </greater-than-equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim-4</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.6</value>
+        </less-than>
+        <greater-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.8</value>
+        </greater-than-equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>trim-5</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-0.8</value>
+        </less-than>
+        <greater-than-equals>
+          <property>/controls/flight/elevator-trim</property>
+          <value>-1</value>
+        </greater-than-equals>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>intporteG</object-name>
+    <object-name>intporteD</object-name>
+    <object-name>structure</object-name>
+    <object-name>planchet</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>intvitreD</object-name>
+    <!-- HDR mode -->
+    <object-name>HDRintvitres</object-name>
+    <object-name>HDRintvitreG</object-name>
+    <object-name>HDRintvitreD</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>../Effects/Bump/int-bumpspec</inherits-from>
+    <object-name>interieur</object-name>
+    <object-name>intporteG</object-name>
+    <object-name>intporteD</object-name>
+  </effect>
+
+  <!-- working for Compositor -->
+  <effect>
+    <inherits-from>../Effects/Glass/glassrain</inherits-from>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>intvitreD</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>../Effects/Glass/glass</inherits-from>
+    <object-name>HDRintvitres</object-name>
+    <object-name>HDRintvitreG</object-name>
+    <object-name>HDRintvitreD</object-name>
+  </effect>
+
+  <!-- Sélection des vitres en fonction de HDR ou pas -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <property>sim/rendering/hdr/hdr-enabled</property> -->
+      <property>sim/multiplay/generic/bool[2]</property>
+    </condition>
+    <object-name>HDRintvitres</object-name>
+    <object-name>HDRintvitreG</object-name>
+    <object-name>HDRintvitreD</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <not><property>sim/rendering/hdr/hdr-enabled</property></not> -->
+      <not><property>sim/multiplay/generic/bool[2]</property></not>
+    </condition>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>intvitreD</object-name>
+  </animation>
+
+  <model>
+    <path>Panel/all-panels.xml</path>
+  </model>
+
+  <model>
+    <path>../Pilot/all-pilots.xml</path>
+  </model>
+
+  <model>
+    <path>Seats/all-seats.xml</path>
+  </model>
+
+  <!-- Doors -->
+  <animation>
+    <type>pick</type>
+    <object-name>intporteG</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>HDRintvitreG</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <and>
+            <or>
+              <property>gear/gear[0]/wow</property>
+              <property>gear/gear[1]/wow</property>
+              <property>gear/gear[2]/wow</property>
+              <property>gear/gear[3]/wow</property>
+              <property>gear/gear[4]/wow</property>
+              <property>gear/gear[5]/wow</property>
+              <property>gear/gear[6]/wow</property>
+              <property>gear/gear[7]/wow</property>
+              <property>gear/gear[8]/wow</property>
+              <property>gear/gear[9]/wow</property>
+            </or>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteG</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>HDRintvitreG</object-name>
+    <!-- <property>sim/model/door-positions/crew/position-norm</property> -->
+    <property>sim/multiplay/generic/float[0]</property>
+    <factor> -90 </factor>
+    <axis>
+      <x1-m> -0.98122 </x1-m>
+      <y1-m> -0.59624 </y1-m>
+      <z1-m>  0.27895 </z1-m>
+      <x2-m> -0.72293 </x2-m>
+      <y2-m> -0.59853 </y2-m>
+      <z2-m>  0.22982 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>intporteD</object-name>
+    <object-name>intvitreD</object-name>
+    <object-name>HDRintvitreD</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <and>
+            <or>
+              <property>gear/gear[0]/wow</property>
+              <property>gear/gear[1]/wow</property>
+              <property>gear/gear[2]/wow</property>
+              <property>gear/gear[3]/wow</property>
+              <property>gear/gear[4]/wow</property>
+              <property>gear/gear[5]/wow</property>
+              <property>gear/gear[6]/wow</property>
+              <property>gear/gear[7]/wow</property>
+              <property>gear/gear[8]/wow</property>
+              <property>gear/gear[9]/wow</property>
+            </or>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteD</object-name>
+    <object-name>intvitreD</object-name>
+    <object-name>HDRintvitreD</object-name>
+    <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+    <property>sim/multiplay/generic/float[1]</property>
+    <factor> 90 </factor>
+    <axis>
+      <x1-m> -0.98122 </x1-m>
+      <y1-m>  0.59624 </y1-m>
+      <z1-m>  0.27895 </z1-m>
+      <x2-m> -0.72293 </x2-m>
+      <y2-m>  0.59853 </y2-m>
+      <z2-m>  0.22982 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>
