@@ -143,6 +143,7 @@
       <file>Aircraft/A22-Foxbat/Nasal/light.nas</file>
       <file>Aircraft/A22-Foxbat/Nasal/convert.nas</file>
       <file>Aircraft/A22-Foxbat/Nasal/Electrical.nas</file>
+      <file>Aircraft/A22-Foxbat/Nasal/magnetos.nas</file>
     </a22>
     <water>
       <file>Aircraft/A22-Foxbat/Nasal/onwater.nas</file>

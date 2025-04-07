@@ -19,6 +19,7 @@
     <engines>
       <engine          n="0">
         <fuel-pump     type="bool">false</fuel-pump>
+        <generator     type="bool">true</generator>
       </engine>
     </engines>
   </electric>
@@ -42,5 +43,8 @@
     <aileron-trim      type="double"> 0.00 </aileron-trim>
     <elevator-trim     type="double"> 0.02 </elevator-trim>
   </flight>
+  <switches>
+    <starterkey-insert type="bool">0</starterkey-insert>
+  </switches>
 
 </PropertyList>

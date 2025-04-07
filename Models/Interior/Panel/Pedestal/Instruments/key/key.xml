@@ -18,14 +18,17 @@
     <type>pick</type>
     <object-name>key</object-name>
     <object-name>fond</object-name>
+    <!--
+    If no key, left button clicking will insert key
+    else:
+       Left button will engage starter
+       Middle button will remove key.
+    -->
     <action>
       <button>0</button>
       <binding> <!-- Starter -->
         <condition>
-          <equals>
-            <property>/controls/electric/key</property>
-            <value>1</value>
-          </equals>
+          <property>/controls/switches/starterkey-insert</property>
         </condition>
         <command>property-assign</command>
         <property>/controls/engines/engine/starter</property>
@@ -40,25 +43,60 @@
       </mod-up>
       <binding>
         <condition>
-          <less-than-equals>
-            <property>/controls/electric/key</property>
-            <value>1</value>
-          </less-than-equals>
+          <not>
+            <property>/controls/switches/starterkey-insert</property>
+          </not>
         </condition>
-        <command>property-adjust</command>
-        <property>/controls/electric/key</property>
-        <step>1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>0</wrap>
+        <command>property-assign</command>
+        <property>/controls/switches/starterkey-insert</property>
+        <value>1</value>
       </binding>
       <binding>
         <command>property-toggle</command>
         <property>/sim/model/sound/click</property>
       </binding>
     </action>
+    <action>
+      <button>1</button>
+      <binding>
+        <condition>
+          <property>/controls/switches/starterkey-insert</property>
+        </condition>
+        <command>property-assign</command>
+        <property>/controls/switches/starterkey-insert</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/sound/click</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>starterkey-insert</tooltip-id>
+        <label>%s</label>
+        <property>/controls/switches/starterkey-insert</property>
+        <mapping>nasal</mapping>
+        <script>
+          var f = getprop("/controls/switches/starterkey-insert");
+          if (f) return 'Click to start, click middle button to remove the key';
+          return "Click to insert the key";
+        </script>
+      </binding>
+    </hovered>
   </animation>
-
+  
+  <animation>
+    <type>select</type>
+    <object-name>key</object-name>
+    <object-name>anneau</object-name>
+    <object-name>cle2</object-name>
+    <condition>
+      <property>/controls/switches/starterkey-insert</property>
+    </condition>
+  </animation>
+  
   <animation>
     <type>pick</type>
     <object-name>key</object-name>
@@ -67,7 +105,7 @@
       <button>1</button>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/electric/key</property>
+        <property>/controls/switches/starterkey-insert</property>
         <step>-1</step>
         <min>0</min>
         <max>1</max>
@@ -83,7 +121,7 @@
   <animation>
     <type>rotate</type>
     <object-name>key</object-name>
-    <property>/controls/electric/key-pos</property>
+    <property>/controls/switches/starterkey-insert-pos</property>
     <factor>-30</factor>
     <axis>
       <x>1</x>
@@ -170,7 +208,7 @@
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">Starter</text>
+    <text type="string">Left button to start, right button to remove key</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
@@ -189,7 +227,7 @@
       <z-m>  0.020 </z-m>
     </offsets>
   </text>
-
+  
   <animation>
     <type>material</type>
     <object-name>textosg</object-name>
@@ -207,5 +245,4 @@
       <property>/sim/panel-hotspots</property>
     </condition>
   </animation>
-
 </PropertyList>
