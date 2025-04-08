@@ -137,12 +137,18 @@
     <doors>
       <file>Aircraft/A22-Foxbat/Nasal/doors.nas</file>
     </doors>
+    <updateloop>
+      <file>Aircraft/Generic/updateloop.nas</file>
+    </updateloop>
+     <electric>
+        <file>Nasal/electric.nas</file>
+    </electric>
     <a22>
       <file>Aircraft/A22-Foxbat/Nasal/hdr.nas</file>
       <file>Aircraft/A22-Foxbat/Nasal/liveries.nas</file>
       <file>Aircraft/A22-Foxbat/Nasal/light.nas</file>
       <file>Aircraft/A22-Foxbat/Nasal/convert.nas</file>
-      <file>Aircraft/A22-Foxbat/Nasal/Electrical.nas</file>
+      <file>Aircraft/A22-Foxbat/Nasal/electrical.nas</file>
       <file>Aircraft/A22-Foxbat/Nasal/magnetos.nas</file>
     </a22>
     <ar6201>

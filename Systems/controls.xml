@@ -15,10 +15,13 @@
 
   <electric>
     <battery-switch    type="bool">false</battery-switch>
+    <master-switch    type="bool">false</master-switch>
+    <external-power    type="bool">false</external-power>
     <avionics-switch   type="bool">false</avionics-switch>
     <engines>
       <engine          n="0">
-        <fuel-pump     type="bool">false</fuel-pump>
+        <fuel-pump n="0" type="bool">false</fuel-pump>
+        <fuel-pump n="1" type="bool">false</fuel-pump>
         <generator     type="bool">true</generator>
       </engine>
     </engines>

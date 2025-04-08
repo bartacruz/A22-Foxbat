@@ -21,7 +21,7 @@
       <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/electric/battery-switch</property>
+        <property>/controls/electric/avionics-switch</property>
       </binding>
       <binding>
         <command>property-toggle</command>
@@ -33,7 +33,7 @@
   <animation>
     <type>rotate</type>
     <object-name>switch</object-name>
-    <property>/controls/electric/battery-switch</property>
+    <property>/controls/electric/avionics-switch</property>
     <factor> 30 </factor>
     <axis>
       <x>  0 </x>

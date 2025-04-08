@@ -31,16 +31,28 @@
           <property>/controls/switches/starterkey-insert</property>
         </condition>
         <command>property-assign</command>
-        <property>/controls/engines/engine/starter</property>
+        <property>/controls/switches/starter</property>
         <value>1</value>
       </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/controls/engines/engine/starter</property>
+          <property>/controls/switches/starter</property>
           <value>0</value>
         </binding>
       </mod-up>
+
+      <binding><!-- Key insert -->
+        <condition>
+          <not>
+            <property>/controls/switches/starterkey-insert</property>
+          </not>
+        </condition>
+        <command>property-assign</command>
+        <property>/controls/electric/master-switch</property>
+        <value>1</value>
+      </binding>
+      
       <binding>
         <condition>
           <not>
@@ -51,14 +63,24 @@
         <property>/controls/switches/starterkey-insert</property>
         <value>1</value>
       </binding>
+      
       <binding>
         <command>property-toggle</command>
         <property>/sim/model/sound/click</property>
       </binding>
     </action>
+
     <action>
       <button>1</button>
       <binding>
+        <condition>
+          <property>/controls/switches/starterkey-insert</property>
+        </condition>
+        <command>property-assign</command>
+        <property>/controls/electric/master-switch</property>
+        <value>0</value>  
+      </binding>
+      <binding><!-- Key removal -->
         <condition>
           <property>/controls/switches/starterkey-insert</property>
         </condition>
@@ -98,27 +120,6 @@
   </animation>
   
   <animation>
-    <type>pick</type>
-    <object-name>key</object-name>
-    <object-name>fond</object-name>
-    <action>
-      <button>1</button>
-      <binding>
-        <command>property-adjust</command>
-        <property>/controls/switches/starterkey-insert</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>/sim/model/sound/click</property>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>key</object-name>
     <property>/controls/switches/starterkey-insert-pos</property>
@@ -133,8 +134,8 @@
   <animation>
     <type>rotate</type>
     <object-name>key</object-name>
-    <property>/controls/engines/engine/starter</property>
-    <factor>-30</factor>
+    <property>/controls/switches/starter</property>
+    <factor>-60</factor>
     <axis>
       <x> 1 </x>
       <y> 0 </y>

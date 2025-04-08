@@ -13,7 +13,7 @@
     <type>noshadow</type>
     <object-name>fond</object-name>
   </animation>
-  <!--
+  
   <animation>
     <type>pick</type>
     <object-name>switch</object-name>
@@ -21,7 +21,7 @@
       <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/transponder</property>
+        <property>/controls/electric/battery-switch</property>
       </binding>
       <binding>
         <command>property-toggle</command>
@@ -33,7 +33,7 @@
   <animation>
     <type>rotate</type>
     <object-name>switch</object-name>
-    <property>/controls/switches/transponder-pos</property>
+    <property>/controls/electric/battery-switch</property>
     <factor> 30 </factor>
     <axis>
       <x>  0 </x>
@@ -41,5 +41,5 @@
       <z>  0 </z>
     </axis>
   </animation>
-  -->
+
 </PropertyList>

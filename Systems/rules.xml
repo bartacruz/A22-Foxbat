@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  <electrical>
+    <path></path>
+  </electrical>
   <property-rule n="100">
     <path>Aircraft/A22-Foxbat/Systems/glass-rain.xml</path>
   </property-rule>
@@ -9,5 +11,7 @@
   <property-rule n="101">
     <path>Aircraft/A22-Foxbat/Systems/rollDist.xml</path>
   </property-rule>
-
+  <property-rule n="102">
+    <path>Aircraft/A22-Foxbat/Systems/starter.xml</path>
+  </property-rule>
 </PropertyList>
